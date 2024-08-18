@@ -1,0 +1,6 @@
+[submodule "thirdparty/kCaveHook"]
+	path = thirdparty/kCaveHook
+	url = https://github.com/Umbre11as/kCaveHook.git
+[submodule "thirdparty/Zydis"]
+	path = thirdparty/Zydis
+	url = https://github.com/zyantific/zydis.git
