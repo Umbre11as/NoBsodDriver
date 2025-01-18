@@ -21,7 +21,7 @@ void __fastcall KeBugCheckExDetour(ULONG BugCheckCode, ULONG_PTR BugCheckParamet
 NTSTATUS DriverEntry(PDRIVER_OBJECT, PUNICODE_STRING) {
     HOOK_DATA hookData{};
     Log("Hook status: %d\n", CaveHookEx(reinterpret_cast<ULONGLONG>(KeBugCheckEx), &KeBugCheckExDetour, &original, &hookData));
-    *reinterpret_cast<ULONGLONG*>(0) = 0; // Test bsod by reading and writing memory in 0
+    //*reinterpret_cast<ULONGLONG*>(0) = 0; // Test bsod by reading and writing memory in 0
 
     return STATUS_SUCCESS;
 }
